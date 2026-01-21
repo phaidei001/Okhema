@@ -1,44 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>万维网畅所欲言论坛</title>
+    <style>
+      body {
+        margin: 0;
+        height: 150vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      .yinying {
+        box-shadow:
+          rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+          rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+      .flex {
+        display: flex;
+      }
+      .baise {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 10px;
+      }
+      .mgr8 {
+        margin-right: 10px;
+      }
+      .mgt8 {
+        margin-top: 10px;
+      }
+      .search-container input {
+        width: 400px;
+        height: 25px;
+        line-height: 20px;
+      }
+      .search-container button {
+        width: 50px;
+        height: 30px;
+        line-height: 20px;
+        background-color: beige;
+        border: 1px solid #868686;
+      }
+      .daohang {
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        margin-left: 63px;
+      }
+    </style>
   </head>
-  <body>
-    <div style="text-align: center; padding: 40px">
-      <img src="https://i.imgs.ovh/2026/01/12/yf7wMN.jpeg"alt="yf7wMN.jpeg"border="0"width="250px"height="200px">
-    </div>
-    <div
-      style="
-        max-width: 700px;
-        margin: 30px auto;
-        psdding: 15px;
-        line-height: 1.7;
-        color: orange;
-      "
-    >
-      <p>一款经典狗猫</p>
-      <p>我不知道写什么文案了反正这是一行文案</p>
-      <p>这又是一行文案总之就是balabala……</p>
-      <p>我想吃饭，我想吃好吃的饭，给我饭，饭，我要饿死了……饭！</p>
-      <p>感觉这里可以再加点图片，正中央图标下面做两个按钮，放跳转链接</p>
-      <p>其实直接搞仿造论坛样式的也不错，就是交互链接需要放很多，再思考一下</p>
-      <p>主要还是解密难做，还有故事，需要平衡故事的可读性和解密的可玩性</p>
-    </div>
-    <div
-      style="
-        background-color: #f1f1f1;
-        text-align: center;
-        padding: 20px;
-        font-size: 12px;
-      "
-    >
-      <p>厄敌99</p>
-      <a
-        href="https://www.bilibili.com/video/BV1kniqBcEVU/?spm_id_from=333.337.search-card.all.click&vd_source=55b21aeff14c3951c2e1a8af92b3f3c6"
-        >神秘小链接</a
+  <body class="flex">
+    <!--侧边栏-->>
+    <div style="width: 200px; z-index: 2" class="baise yinying">
+      <!--头像栏-->
+      <div
+        class="column"
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          margin-left: 50px;
+          margin-top: 50px;
+        "
+        class="flex"
       >
+        <img
+          src="https://i.imgs.ovh/2026/01/20/yA0vYA.png"
+          width="80px"
+          height="80px"
+          alt=""
+        />
+      </div>
+      <div
+        style="
+          margin-top: 10px;
+          margin-left: 49px;
+          font-size: 17px;
+          font-weight: 500;
+        "
+      >
+        最伟大的作品
+      </div>
+      <!--导航栏-->
+      <div class="flex1">
+        <div
+          class="daohang"
+          style="
+            margin-top: 90px;
+            border-bottom: 1px solid rgb(190, 190, 190);
+            margin-right: 64px;
+          "
+        >
+          关注
+        </div>
+        <div
+          class="daohang"
+          style="
+            border-bottom: 1px solid rgb(190, 190, 190);
+            margin-right: 64px;
+          "
+        >
+          点赞
+        </div>
+        <div
+          class="daohang"
+          style="
+            border-bottom: 1px solid rgb(190, 190, 190);
+            margin-right: 64px;
+          "
+        >
+          收藏
+        </div>
+        <div
+          class="daohang"
+          style="
+            border-bottom: 1px solid rgb(190, 190, 190);
+            margin-right: 64px;
+          "
+        >
+          私信
+        </div>
+        <div
+          class="daohang"
+          style="
+            border-bottom: 1px solid rgb(190, 190, 190);
+            margin-right: 64px;
+          "
+        >
+          设置
+        </div>
+      </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+      <!--头部栏-->
+      <div style="height: 150px; z-index: 1" class="baise yinying"></div>
+      <!--内容区-->
+      <div style="overflow: auto" class="flex1 flex">
+        <!--左区-->
+        <div style="flex: 3" class="flex column mg8">
+          <!--搜索框-->
+          <div style="height: 40px" class="flex mg8">
+            <div class="container">
+              <div class="search-container">
+                <input type="text" placeholder="提示：......" />
+                <button>搜索</button>
+              </div>
+            </div>
+          </div>
+          <!--导航栏-->
+          <div class="flex">
+            <!--导航键-->
+            <div style="height: 50px" class="flex1 baise mgr8 yinying"></div>
+            <div style="height: 50px" class="flex1 baise mgr8 yinying"></div>
+            <div style="height: 50px" class="flex1 baise mgr8 yinying"></div>
+            <div style="height: 50px" class="flex1 baise mgr8 yinying"></div>
+            <div style="height: 50px" class="flex1 baise mgr8 yinying"></div>
+            <div style="height: 50px" class="flex1 baise mgr8 yinying"></div>
+            <div style="height: 50px" class="flex1 baise yinying"></div>
+          </div>
+          <!--论坛帖-->
+          <div class="flex column">
+            <!--帖子项-->
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+            <div style="height: 160px" class="baise mgt8 yinying"></div>
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1" class="flex column mgr8 mgt8">
+          <!--聊天区-->
+          <div style="height: 101px"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+          <div style="height: 50px" class="baise mgt8 yinying"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
+
